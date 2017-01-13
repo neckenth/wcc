@@ -27,9 +27,7 @@ def get_computer_move():
     return computer_move
 
 
-def judge():
-    move_a = get_player_move()
-    move_b = get_computer_move()
+def judge(move_a, move_b):
     if move_a == 'rock' and move_b == 'paper':
         return False
     elif move_a == 'paper' and move_b == 'rock':
@@ -43,22 +41,19 @@ def judge():
     elif move_a == 'scissors' and move_b == 'paper':
         return True
     elif move_a == move_b:
-        print('Tie! Play again!')
-
-
-def results():
-    if judge() is True:
-        print('You won!')
-    elif judge() is False:
-        print('The computer won!')
+        return 'tie'
 
 
 def play():
     print('\nWelcome to Rock, Paper, Scissors!')
-    get_player_move()
-    get_computer_move()
-    judge()
-    results()
+    move_a = get_player_move()
+    move_b = get_computer_move()
+    if judge(move_a, move_b) is True:
+        print('You won!')
+    elif judge(move_a, move_b) is False:
+        print('The computer won!')
+    elif judge(move_a, move_b) == 'tie':
+        print('Tie! Play again!')
     play_again = raw_input("\nPlay again? Type 'y' or 'n': ")
     if play_again == 'y':
         play()
