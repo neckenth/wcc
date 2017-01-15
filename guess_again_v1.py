@@ -49,7 +49,7 @@ def play():
     while compare(num_a, num_b) != 'equal':
         if compare(num_a, num_b) == 'high':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
-        if compare(num_a, num_b) == 'low':
+        elif compare(num_a, num_b) == 'low':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
         num_a = get_guess()
     if compare(num_a, num_b) == 'equal':
@@ -73,7 +73,7 @@ def play(min, max):
     while compare(num_a, num_b) != 'equal':
         if compare(num_a, num_b) == 'high':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
-        if compare(num_a, num_b) == 'low':
+        elif compare(num_a, num_b) == 'low':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
         num_a = get_guess()
     if compare(num_a, num_b) == 'equal':
@@ -97,7 +97,7 @@ def play(min, max):
     while compare(num_a, num_b) != 'equal':
         if compare(num_a, num_b) == 'high':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
-        if compare(num_a, num_b) == 'low':
+        elif compare(num_a, num_b) == 'low':
             print('Too ' + compare(num_a, num_b) + '. Guess again.')
         num_a = get_guess()
         counter += 1
