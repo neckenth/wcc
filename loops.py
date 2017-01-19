@@ -19,9 +19,9 @@
 # for continent in continents:
 #     print continent + ' is a continent.'
 
-# print range(0, 15)
-#
-# print range(10)
+print range(0, 15)
+
+print range(10)
 
 vowels = ['a','e', 'i', 'o', 'u']
 
