@@ -26,8 +26,6 @@ def compare(num_a, num_b):
     elif num_a == num_b:
         return 'equal'
 
-# this version works, but I don't think I should need all these if...else conditions
-
 
 def play(minimum, maximum, tries):
     secret_number = random.randint(minimum, maximum)
